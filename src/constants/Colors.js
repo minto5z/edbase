@@ -1,0 +1,16 @@
+export default {
+    primary: '#0097e6',
+    success: '#44bd32',
+    danger: '#c23616',
+    info: '#17c0eb',
+    warning: '#e1b12c',
+    dark: '#222f3e',
+    light: '#f5f6fa',
+    white: '#ffffff',
+    black: '#000000',
+    purple: '#7158e2',
+    blue: '#01579b',
+    background: '#f1fbfd',
+    indigo: '#192a56',
+    transparent: '#00ff001C',
+}
