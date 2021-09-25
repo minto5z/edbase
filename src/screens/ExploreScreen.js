@@ -1,24 +1,29 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import React from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
+import AppLayout from "../layouts/app/AppLayout";
+import Colors from "../constants/Colors";
 
 const ExploreScreen = () => {
-    return (
+  return (
+    <AppLayout>
       <View style={styles.container}>
         <Text>ExploreScreen</Text>
         <Button
           title="Click Here"
-          onPress={() => alert('Button Clicked!')}
+          color={Colors.blue}
+          onPress={() => alert("Button Clicked!")}
         />
       </View>
-    );
+    </AppLayout>
+  );
 };
 
 export default ExploreScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    alignItems: 'center', 
-    justifyContent: 'center'
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

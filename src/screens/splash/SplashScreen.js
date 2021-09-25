@@ -12,6 +12,7 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from '@react-navigation/native';
+import Colors from "../../constants/Colors";
 
 const SplashScreen = ({navigation}) => {
     const { colors } = useTheme();
@@ -66,7 +67,7 @@ const height_logo = height * 0.28;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#009387'
+    backgroundColor: Colors.blue
   },
   header: {
       flex: 2,

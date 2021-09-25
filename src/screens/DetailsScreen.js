@@ -1,23 +1,20 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import AppLayout from "../layouts/app/AppLayout";
+import Colors from "../constants/Colors";
 
 const DetailsScreen = ({props}) => {
     return (
-      <View style={styles.container}>
-        <Text>Details Screen</Text>
-        <Button
-            title="Go to details screen...again"
-            onPress={() => props.navigation.push("Details")}
-        />
-        <Button
-            title="Go to home"
-            onPress={() => props.navigation.navigate("Home")}
-        />
-        <Button
-            title="Go back"
-            onPress={() => props.navigation.goBack()}
-        />
-      </View>
+      <AppLayout>
+        <View style={styles.container}>
+          <Text>DetailsScreen</Text>
+          <Button
+            title="Click Here"
+            color={Colors.blue}
+            onPress={() => alert('Button Clicked!')}
+          />
+        </View>
+      </AppLayout>
     );
 };
 
