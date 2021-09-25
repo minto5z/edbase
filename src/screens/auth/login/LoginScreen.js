@@ -9,7 +9,7 @@ import {Login} from './Login';
 import environment from '../../../environments/environment';
 import {AppButton, AppError, AppFormText} from '../../../components';
 
-const LoginScreen = (navigation) => {
+const LoginScreen = (props) => {
 
     const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ const LoginScreen = (navigation) => {
         if (data.access_token !== undefined) {
             asyncStorage.setValue('access_token', data.access_token);
             //history.push('/home')
-            navigation.navigate("Home")
+            props.navigation.navigate('Home')
         }
     }, [data]);
 
@@ -87,7 +87,7 @@ const LoginScreen = (navigation) => {
                             title="Register"
                             mode="outlined"
                             width={'100%'}
-                            onPress={() => navigation.navigate("Register")}/>
+                            onPress={() => props.navigation.navigate('Register')}/>
                     </>
                 )}
             </Formik>

@@ -4,7 +4,7 @@ import * as React from "react";
 import {AppButton} from "../../../components";
 import AppLayout from "../../../layouts/app/AppLayout";
 
-const PersonalInfoForm = (navigation) => {
+const PersonalInfoForm = (props) => {
 
     return (
         <AppLayout>
@@ -13,7 +13,7 @@ const PersonalInfoForm = (navigation) => {
                 title="Profile"
                 mode="outlined"
                 width={'100%'}
-                onPress={() => navigation.navigate("Profile")}/>
+                onPress={() => props.navigation.navigate("Profile")}/>
         </AppLayout>
     );
 };

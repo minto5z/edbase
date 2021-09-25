@@ -144,6 +144,10 @@ import { DrawerContent } from "./src/screens/DrawerContent";
 import ProfileScreen from "./src/screens/profile/ProfileScreen";
 import TokenRootStackScreen from "./src/screens/root-stack/TokenRootStackScreen";
 import RootStackScreen from "./src/screens/root-stack/RootStackScreen";
+import PersonalInfoForm from "./src/screens/profile/personal-info/PersonalInfoForm";
+import ContactInfoForm from "./src/screens/profile/contact-info/ContactInfoForm";
+import GuardianInfoForm from "./src/screens/profile/guardian-info/GuardianInfoForm";
+import DetailsScreen from "./src/screens/DetailsScreen";
 
 
 const Drawer = createDrawerNavigator();
@@ -198,15 +202,19 @@ const App = () => {
       <PaperProvider theme={theme}>
         {/*<AuthContext.Provider value={authContext}>*/}
         <NavigationContainer theme={theme}>
-          {accessToken !== null ? (
+          {accessToken == null ? (
               <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
                 <Drawer.Screen name="Home" component={MainTabScreen} />
                 <Drawer.Screen name="Profile" component={ProfileScreen} />
                 <Drawer.Screen name="Support" component={SupportScreen} />
                 <Drawer.Screen name="Settings" component={SettingsScreen} />
                 <Drawer.Screen name="Bookmark" component={BookmarkScreen} />
+                <Drawer.Screen name="Details" component={DetailsScreen} />
                 <Drawer.Screen name="MainTab" component={MainTabScreen} />
-                <TokenRootStackScreen />
+                <Drawer.Screen name="Personal" component={PersonalInfoForm} />
+                <Drawer.Screen name="Contact" component={ContactInfoForm} />
+                <Drawer.Screen name="Guardian" component={GuardianInfoForm} />
+                {/*<TokenRootStackScreen />*/}
               </Drawer.Navigator>
             )
             :

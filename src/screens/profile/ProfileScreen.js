@@ -9,18 +9,18 @@ function ProfileScreen({navigation}) {
     <AppLayout>
       <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={styles.topHeadingContainer}>
+          {/*<View style={styles.topHeadingContainer}>*/}
 
-            <Text style={[styles.headingText, styles.heading]}>Profile</Text>
-            <Avatar
-              rounded
-              source={{
-                uri:
-                  "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"
-              }}
-            />
-          </View>
-          <View style={styles.horizontalLine}></View>
+          {/*  <Text style={[styles.headingText, styles.heading]}>Profile</Text>*/}
+          {/*  <Avatar*/}
+          {/*    rounded*/}
+          {/*    source={{*/}
+          {/*      uri:*/}
+          {/*        "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"*/}
+          {/*    }}*/}
+          {/*  />*/}
+          {/*</View>*/}
+          {/*<View style={styles.horizontalLine}></View>*/}
           <TouchableOpacity onPress={() => navigation.navigate("Personal")}>
             <Text style={styles.section2Title}>Personal Info</Text>
           </TouchableOpacity>

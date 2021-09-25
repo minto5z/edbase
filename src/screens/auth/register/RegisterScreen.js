@@ -130,7 +130,7 @@ const RegisterScreen = ({navigation}) => {
                             title="Login"
                             mode="outlined"
                             width={'100%'}
-                            onPress={() => history.push('/')}/>
+                            onPress={() => navigation.navigate('Login')}/>
                     </>
                 )}
             </Formik>
